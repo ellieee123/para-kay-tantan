@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>ReadQuest — Reading Comprehension Game</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>ReadQuest</h1>
+      <div id="user-area">
+        <input id="playerName" placeholder="Enter name (or nickname)" />
+        <button id="startBtn">Start</button>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- Screen: Story selection -->
+      <section id="select-screen" class="screen">
+        <h2>Choose a Story</h2>
+        <div id="story-list" class="card-grid"></div>
+      </section>
+
+      <!-- Screen: Reading -->
+      <section id="reading-screen" class="screen hidden">
+        <div class="card">
+          <h2 id="story-title"></h2>
+          <div id="story-text" class="story-text"></div>
+          <div class="controls">
+            <button id="to-questions-btn">Answer Questions</button>
+            <button id="back-to-list">Back</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Screen: Questions -->
+      <section id="question-screen" class="screen hidden">
+        <div class="card">
+          <h2 id="q-title">Questions</h2>
+          <div id="questions-container"></div>
+          <div class="controls">
+            <button id="submit-answers">Submit Answers</button>
+            <button id="cancel-questions">Cancel</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Screen: Results -->
+      <section id="result-screen" class="screen hidden">
+        <div class="card">
+          <h2>Results</h2>
+          <div id="result-summary"></div>
+          <div id="detailed-feedback"></div>
+          <div class="controls">
+            <button id="play-again">Play another story</button>
+            <button id="view-leaderboard">Leaderboard</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Screen: Leaderboard -->
+      <section id="leaderboard-screen" class="screen hidden">
+        <div class="card">
+          <h2>Leaderboard (Local)</h2>
+          <ol id="leaderboard-list"></ol>
+          <div class="controls">
+            <button id="lb-back">Back</button>
+            <button id="clear-leaderboard">Clear Leaderboard</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <small>ReadQuest — prototype • For Grade 11 ICT project</small>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
